@@ -64,6 +64,18 @@ namespace BinarySearchTreePrograms
                 PreorderTraversal(node.right);
             }
         }
+
+        public int Size(Node node)
+        {
+            if (node == null)
+            {
+                return 0;
+            }
+            else
+            {
+                return Size(node.right) + 1 + Size(node.left);
+            }
+        }
     }
 }
     
