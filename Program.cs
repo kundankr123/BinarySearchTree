@@ -21,11 +21,21 @@
             bst.Insert(63);
             bst.Insert(67);
 
-            Console.WriteLine("\n");
+            //Console.WriteLine("\n");
             Console.WriteLine("Size of BST: " + bst.Size(bst.root));
 
             Console.WriteLine("Preorder Traversal of BST:");
             bst.PreorderTraversal(bst.root);
+
+            Node node1 = bst.Search(bst.root,63);
+            if (node1 == null)
+            {
+                Console.WriteLine("Node not found");
+            }
+            else
+            {
+                Console.WriteLine("Node found: " + node1.data);
+            }
 
 
 

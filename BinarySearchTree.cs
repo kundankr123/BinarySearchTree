@@ -76,6 +76,22 @@ namespace BinarySearchTreePrograms
                 return Size(node.right) + 1 + Size(node.left);
             }
         }
+
+        public Node Search(Node node, int data)
+        {
+            if (node == null || node.data == data)
+            {
+                return node;
+            }
+            else if (data < node.data)
+            {
+                return Search(node.left, data);
+            }
+            else
+            {
+                return Search(node.right, data);
+            }
+        }
     }
 }
     
